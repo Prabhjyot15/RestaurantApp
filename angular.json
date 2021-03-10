@@ -25,7 +25,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap3/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
