@@ -6,13 +6,19 @@
           <th>ItemName</th>
           <th>itemQuantity</th>
           <th>itemPrice</th>
+          <th>Action</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let cartItem of cartList">
                 <td>{{cartItem.itemName}}</td>
                 <td>{{cartItem.itemQuantity}}</td>
-                <td>{{cartItem.itemPrice}}</td>
+                <td>{{cartItem.itemPrice * cartItem.itemQuantity}}</td>
+                <td>
+                    <button class="btn btn-success" (click)="reduceQuantity(cartItem)">-</button> &nbsp;
+                    <button class="btn btn-alert" (click)="addQuantity(cartItem)">+</button> &nbsp;
+                    <button class="btn btn-danger" (click)="deleteItem(cartItem)">Delete</button>
+                </td>
         </tr>
     </tbody>
     </table>
