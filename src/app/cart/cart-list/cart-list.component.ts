@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataStateService } from 'src/app/data-state.service';
+import { CartItem } from 'src/app/model/cart-item.model';
 
 @Component({
   selector: 'app-cart-list',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart-list.component.css']
 })
 export class CartListComponent implements OnInit {
-
-  constructor() { }
+cartList : CartItem[] = []
+  constructor(private dataStateService: DataStateService) { }
 
   ngOnInit(): void {
+this.dataStateService.cartItems.subscribe(response=>{
+  this.cartList = response;
+  console.log(this.cartList);
+});
   }
 
 }
