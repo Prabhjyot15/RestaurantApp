@@ -12,9 +12,9 @@ cartList : CartItem[] = []
   constructor(private dataStateService: DataStateService) { }
 
   ngOnInit(): void {
-this.dataStateService.cartItems.subscribe(response=>{
+  this.dataStateService.cartItems.subscribe(response=>{
   this.cartList = response;
-  console.log(this.cartList);
+  console.log( this.cartList )
 });
   }
 
