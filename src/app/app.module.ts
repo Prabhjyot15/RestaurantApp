@@ -9,6 +9,8 @@ import { MenuListComponent } from './menu/menu-list/menu-list.component';
 import { CartItemComponent } from './cart/cart-item/cart-item.component';
 import { CartListComponent } from './cart/cart-list/cart-list.component';
 import { CommonModule } from "@angular/common";
+import { FinalOrderDetailsComponent } from './final-order-details/final-order-details.component';
+import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,9 @@ import { CommonModule } from "@angular/common";
     MenuItemComponent,
     MenuListComponent,
     CartItemComponent,
-    CartListComponent
+    CartListComponent,
+    FinalOrderDetailsComponent,
+    OrderConfirmationComponent
   ],
   imports: [
     BrowserModule,
